@@ -1,0 +1,20 @@
+.search {
+    z-index: 1;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+input {
+    text-align: center;
+    font-size: 25px;
+    height: 60px;
+    border-radius: 50px;
+    width: 50%;
+}
