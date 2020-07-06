@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useInjectSaga } from "../../../utils/injectSaga";
 import { getMovies, searchMovies } from '../redux/actions';
-import { Row, Col } from "antd";
+import { Row, Col, Alert } from "antd";
 import { withRouter } from "react-router-dom";
 import queryString from "query-string";
 import saga from '../redux/saga';
@@ -74,6 +74,9 @@ const App = (props) => {
       <Row>
           <Col span={24}>
             {
+              state.MoviesReducer.error ?
+              <Alert message="UPS! An error ocurred" type="warning" />
+              :
               state.MoviesReducer.loading ?
               <Col span={12} offset={6}>
                 <Loading />
